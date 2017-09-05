@@ -14,5 +14,11 @@
     "services"
   ],
   "author": "Delsael Kenji",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bookshelf": "^0.10.4",
+    "express": "^4.15.4",
+    "knex": "^0.13.0",
+    "sqlite3": "^3.1.9"
+  }
 }
