@@ -1,17 +1,16 @@
+var config = require('./config');
+
+console.log(config)
 module.exports = {
-
-  development: {
-    client: 'sqlite3',
-    connection: {
-      filename: './db/dev.sqlite3'
-    },
-    migrations: {
-      directory: './db/migrations'
-    },
-    seeds: {
-      directory: './db/seeds'
-    },
-    useNullAsDefault: true
+  client: 'sqlite3',
+  connection: {
+    filename: config.db.uri
   },
-
+  migrations: {
+    directory: config.db.migrations
+  },
+  seeds: {
+    directory: config.db.seeds
+  },
+  useNullAsDefault: true
 };

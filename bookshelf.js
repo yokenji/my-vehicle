@@ -1,8 +1,8 @@
 'use strict';
 
-var env = 'development';
-var conf = require('./knexfile')[env];
+var conf = require('./knexfile');
 var knex = require('knex')(conf);
 var bookshelf = require('bookshelf')(knex);
+bookshelf.plugin('registry');
 
 module.exports = bookshelf;
